@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="shortcut icon" href="./src/asstes/devchallenges.png" type="image/x-icon">
+    <title>Multi Step Register</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Step 1 start -->
+        <form action="" autocomplete="off" class="step-1" id="form1">
+            <h1>Register</h1>
+            <label for="name">
+                Name
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            </label>
+            <label for="email">
+                Email
+                <input type="email" name="email" id="email" placeholder="example@example.com" required>
+            </label>
+            <div class="btn-box">
+                <button class="btn-next" type="button" id="next1">Continue</button>
+            </div>
+            <p class="error" id="error"></p>
+        </form>
+        <!-- Step 1 end -->
+        <!-- Step 2 start -->
+        <form action="" class="step-2" id="form2">
+            <h1>Which topics are you interested in?</h1>
+            <label for="topic1" class="topic">
+                <input type="checkbox" id="topic1" class="btn-topic checkbox">
+                Software Development
+            </label>
+            <label for="topic2" class="topic">
+                <input type="checkbox" id="topic2" class="btn-topic checkbox">
+                User Experience
+            </label>
+            <label for="topic3" class="topic">
+                <input type="checkbox" id="topic3" class="btn-topic checkbox">
+                Graphic Design
+            </label>
+            <div class="btn-box">
+                <button class="btn-prev" type="button" id="prev1">Previous</button>
+                <button class="btn-next" type="button" id="next2">Continue</button>
+            </div>
+            <p class="error" id="error"></p>
+        </form>
+        <!-- Step 2 ends & Step 3 starts -->
+        <form class="step-3 summary" id="form3">
+            <h1>Summary</h1>
+            <p>Name: <span id="nameResult"></span></p>
+            <p>Email: <span id="emailResult"></span></p>
+            <p>Topics:</p>
+            <ul id="topicsResult"></ul>
+            <div class="btn-box">
+                <button class="btn-prev" type="button" id="prev2">Previous</button>
+                <button class="btn-next" type="submit" id="submit">Confirm</button>
+            </div>
+        </div>
+        <!-- Step 3 end -->
+    </div>
+    <script src="./src/main.js" defer></script>
+</body>
+</html>
